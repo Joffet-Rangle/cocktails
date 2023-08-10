@@ -16,32 +16,32 @@ import { connect } from "react-redux";
 
 const styles = {
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   mainTitle: {
     color: "white",
     fontSize: 20,
     textTransform: "capitalize",
-    marginLeft: ".5em"
+    marginLeft: ".5em",
   },
   menuButtonText: {
     color: "white",
     fontSize: 14,
-    marginLeft: ".5em"
+    marginLeft: ".5em",
   },
   textBackground: {
     marginLeft: "0.2em",
     paddingTop: ".3em",
-    paddingBottom: ".3em"
+    paddingBottom: ".3em",
   },
   /** Pride specific styles */
   prideBackground: {
     background: `linear-gradient(to bottom,
         #e70000 0,
-        #e70000 16%,
+        #e70000 17%,
         #ff8c00 16%,
         #ff8c00 32%,
         #ffd400 32%,
@@ -50,18 +50,18 @@ const styles = {
         #00811f 66%,
         #0044ff 66%,
         #0044ff 86%,
-        #760089 86%) no-repeat`
+        #760089 86%) no-repeat`,
   },
   prideTextBackground: {
-    backgroundColor: "rgba(0, 0, 0, 0.25)"
-  }
+    backgroundColor: "rgba(0, 0, 0, 0.25)",
+  },
 };
 
 function App({ pride, classes }) {
   const backgroundClass = pride ? classes.prideBackground : null;
   const textBackgroundClass = [
     classes.textBackground,
-    pride ? classes.prideTextBackground : null
+    pride ? classes.prideTextBackground : null,
   ].join(" ");
 
   return (
@@ -133,8 +133,8 @@ function App({ pride, classes }) {
   );
 }
 
-const mapStateToProps = state => ({
-  pride: state.settings.pride
+const mapStateToProps = (state) => ({
+  pride: state.settings.pride,
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(App));
