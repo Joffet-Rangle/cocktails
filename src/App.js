@@ -1,3 +1,4 @@
+import "./wdyr";
 import React from "react";
 import Theme from "./theme";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
